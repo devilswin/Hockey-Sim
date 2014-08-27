@@ -20,7 +20,7 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
     float t1Daw = teamDaw[x];
     float t2Daw = teamDaw[y];
     bool begin_game = true;
-    if ([begin_game]) //Just gives the user the idea which team is better
+    if (begin_game == true) //Just gives the user the idea which team is better
     {
         if (t1Daw > t2Oaw)
         {

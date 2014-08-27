@@ -10,6 +10,7 @@
 #include "Player.h"
 #include "assemble_teamdata.h"
 #include "game_sim.h"
+
 using namespace std;
 
 int main()
@@ -17,16 +18,11 @@ int main()
     mt19937 rand_engine(time(nullptr));
     vector<Player> plyrs;
     srand(time(NULL));
-    bool firstTimer = false;
-
     cout << "Is this the first time this program has run?" << endl;
     string firstTime;
     cin >> firstTime;
-
-    if (firstTime == "Yes" || firstTime == "yes")
+    if (firstTime == "Yes" || firstTime == "yes") //Performs first time setup i.e it generates players
     {
-        firstTimer = true;
-
         for (int i = 0; i < 30; i++)
         {
             int limit = 18; //rand() % (25 - 18) + 18;
@@ -50,11 +46,7 @@ int main()
         plyrdata << human_teamInput << endl;
         plyrdata.close();
         ofstream playerSaveData;
-
         playerSaveData.open ("savedata.txt");
-
-
-
         for (int i = 0; i<plyrs.size(); i++)
         {
             playerSaveData << plyrs[i].plName << endl;
@@ -65,17 +57,21 @@ int main()
             playerSaveData << plyrs[i].pldsps << endl;
             playerSaveData << plyrs[i].plSpg << endl;
             playerSaveData << plyrs[i].plSps << endl;
-            playerSaveData << plyrs[i].plteam << (i<(plyrs.size()-1)?"\n":"");
+            playerSaveData << plyrs[i].plteam << (i<(plyrs.size()-1)?"\n":"");//No clue what this does
         }
         playerSaveData.close();
         assemble_Team_Data();
     }
-
-    else
+    else if (firstTime =="No" || firstTime == "no")
     {
         assemble_Team_Data();
     }
+    else
+    {
+        cout << "Please Enter either Yes or No!" << endl;
+        firstTime = "";
+        cin >> firstTime;
+    }
     Sleep(10000);
-
     return 0;
 }

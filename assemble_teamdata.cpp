@@ -112,5 +112,5 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     cin >> ui;
     int team2num = atoi(ui.c_str()) - 1;
     view_roster(roster_team,teamPlyr,human_team);
-    game_sim(spgStats,teamSpsavg,teamDspsavg,teamDspgavg, human_team,team2num, teamOawavg,teamDawavg,dspgStats,dspsStats); //Getting error here, says cannot convert ftom vector<float> to int?
+    //game_sim(spgStats,teamSpsavg,teamDspsavg,teamDspgavg, human_team,team2num, teamOawavg,teamDawavg,dspgStats,dspsStats); //Getting error here, says cannot convert ftom vector<float> to int?
 }
