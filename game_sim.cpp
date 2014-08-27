@@ -1,9 +1,9 @@
 
 #include "game_sim.h"
 using namespace std;
-void game_sim(vector<float> Spg, vector<float> Sps, int x, int y, vector<float>teamOaw, vector<float>teamDaw, vector<float> dSpg, vector<float> dSps)
+void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<float> Dspg, int x, int y, vector<float>teamOaw, vector<float>teamDaw, vector<float> dSpg, vector<float> dSps)//X is the first team (usually the human team), Y is the other team
 {
-
+    cout << Dsps[x] << Dsps[y] << Dspg[x] << Dspg[y] << endl;
     int otwt1 = 0;
     int otwt2 = 0;
     int t1wins =0;
@@ -14,48 +14,36 @@ void game_sim(vector<float> Spg, vector<float> Sps, int x, int y, vector<float>t
     int edge2 = 0;
     int edge1 = 0;
 
-    float spgt1 = Spg[x] - 2.5 + 2.5*rand()/RAND_MAX;
-    float spgt2 = Spg[y] - 2.5 + 2.5*rand()/RAND_MAX;
-    float spst1 = Sps[x] - 2.0 + 2.0*rand()/RAND_MAX;
-    float spst2 =Sps[y] - 2.0 + 2.0*rand()/RAND_MAX;
+
     float t1Oaw = teamOaw[x];
     float t2Oaw = teamOaw[y];
     float t1Daw = teamDaw[x];
     float t2Daw = teamDaw[y];
-    float oedget1 =t1Oaw - 2.0 + 2.0*rand()/RAND_MAX;
-    float oedget2 =t2Oaw - 2.0 + 2.0*rand()/RAND_MAX;
-    float dedget1 =t1Daw - 2.0 + 2.0*rand()/RAND_MAX;
-    float dedget2 =t2Daw - 2.0 + 2.0*rand()/RAND_MAX;
     bool begin_game = true;
-    if (begin_game == true)
+    if ([begin_game]) //Just gives the user the idea which team is better
     {
         if (t1Daw > t2Oaw)
         {
-            //spgt2 -= 5;
-            //spgt2 -= 2.5;
             edge1 += 1;
         }
         else
         {
-            //spgt2 += 2.5;
-            //spst2 += 1;
             edge2 +=1;
         }
         if (t2Daw > t1Oaw)
         {
-            //spgt1 -= 5;
-            //spst1 -= 2.5;
             edge2 +=1;
-
         }
         else
         {
-            //spgt1 +=  2.5;
-            //spgt2 += 1;
             edge1 += 1;
         }
         begin_game = false;
     }
+    float spgt1 = Spg[x] - 2.5 + 2.5*rand()/RAND_MAX;
+    float spgt2 = Spg[y] - 2.5 + 2.5*rand()/RAND_MAX;
+    float spst1 = Sps[x] - 2.0 + 2.0*rand()/RAND_MAX;
+    float spst2 =Sps[y] - 2.0 + 2.0*rand()/RAND_MAX;
     if (edge1 > edge2)
     {
         cout << "Team " << x + 1 << " has the edge" << endl;
