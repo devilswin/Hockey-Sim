@@ -81,9 +81,7 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
             spgStats[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].plSpg;
             teamOaw[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].ploaw;
             teamDaw[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].pldaw;
-            int s = roster_team[teamPlyr[numPlayers].plteam].size();
-            roster_team[teamPlyr[numPlayers].plteam].resize(s+1);
-            roster_team[teamPlyr[numPlayers].plteam][s] = teamPlyr[numPlayers].plName;
+             = teamPlyr[numPlayers].plName;
             numPlayers += 1;
 
         }
