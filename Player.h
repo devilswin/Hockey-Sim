@@ -15,7 +15,7 @@ class Player
 {
 public:
     void readPlayerData();
-    void setPlayeName(mt19937& rand_engine);
+    void setPlayeName();
     void setPlayerTeam(const int& team);
     void organize_Players(string z,int a,float b,float c,int d);
     void setPlyrVal();

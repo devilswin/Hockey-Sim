@@ -73,3 +73,77 @@
 1409160646 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\view_roster.cpp
 	"view_roster.h"
 
+1409931164 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\assemble_teamdata.cpp
+	"assemble_teamdata.h"
+
+1409927574 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\assemble_teamdata.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	"Player.h"
+	"game_sim.h"
+	"view_roster.h"
+
+1409928302 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\player.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+
+1409873846 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\game_sim.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+
+1409931176 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	"Player.h"
+
+1409931877 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\game_sim.cpp
+	"game_sim.h"
+
+1409930555 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\main.cpp
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	"Player.h"
+	"assemble_teamdata.h"
+	"game_sim.h"
+
+1409930504 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\player.cpp
+	"Player.h"
+
+1409931174 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.cpp
+	"view_roster.h"
+

@@ -11,7 +11,7 @@
 #include <cstdlib>
 #include "Player.h"
 using namespace std;
-void view_roster(const vector<vector<string> > &roster_team, const vector<Player> &teamPlyr, int human_team);
+void view_roster(vector<Player> my_team_plyr, int human_team);
 
 
 #endif // VIEW_ROSTER_H_INCLUDED

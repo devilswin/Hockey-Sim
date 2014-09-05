@@ -18,15 +18,13 @@ void Player::readPlayerData()//will read from a file of first and last names
         }
 
     }
-void Player::setPlayeName(mt19937& rand_engine) //Will pick two options for a first and last name
+void Player::setPlayeName() //Will pick two options for a first and last name
     {
         //readPlayerData();
-        uniform_int_distribution<int> fname_rand(0, plFname.size());
-
-        string fname = plFname[fname_rand(rand_engine)];
-        uniform_int_distribution<int> lname_rand(0, plLname.size());
-
-        string lname = plLname[lname_rand(rand_engine)];
+        int y = rand() % plFname.size() + 1;
+        string fname = plFname[y - 1];
+        int x = rand() % plLname.size() + 1;
+        string lname = plLname[x - 1];
         plName = string(fname + " " + lname);
 
     }

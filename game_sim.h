@@ -10,7 +10,7 @@
 #include <vector>
 #include <cstdlib>
 using namespace std;
-void game_sim(vector<float> Spg, vector<float> Sps, int x, int y, vector<float>teamOaw, vector<float>teamDaw);
+void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<float> Dspg, int x, int y, vector<float>teamOaw, vector<float>teamDaw, vector<float> dSpg, vector<float> dSps);
 
 
 #endif // GAME_SIM_H_INCLUDED

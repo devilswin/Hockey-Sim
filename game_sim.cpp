@@ -3,7 +3,6 @@
 using namespace std;
 void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<float> Dspg, int x, int y, vector<float>teamOaw, vector<float>teamDaw, vector<float> dSpg, vector<float> dSps)//X is the first team (usually the human team), Y is the other team
 {
-    cout << Dsps[x] << Dsps[y] << Dspg[x] << Dspg[y] << endl;
     int otwt1 = 0;
     int otwt2 = 0;
     int t1wins =0;
@@ -40,6 +39,11 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
         }
         begin_game = false;
     }
+    Spg[x] = Spg[x] - Dspg[y];
+    Spg[y] = Spg[y] - Dspg[x];
+    Sps[x] = Sps[x] - Dsps[y];
+    Sps[y] = Sps[y] - Dsps[x];
+
     float spgt1 = Spg[x] - 2.5 + 2.5*rand()/RAND_MAX;
     float spgt2 = Spg[y] - 2.5 + 2.5*rand()/RAND_MAX;
     float spst1 = Sps[x] - 2.0 + 2.0*rand()/RAND_MAX;
@@ -75,6 +79,7 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
     if (pause == false)
     {
         int otscore = 0;
+
         int goalComChoose;
         int saveComChoose;
         int t1score = 0;

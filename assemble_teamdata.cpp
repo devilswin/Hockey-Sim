@@ -13,7 +13,7 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     vector <float>teamSpgavg;//Avg of each teams SPG, 30 slots
     vector <float>teamDspsavg;// Avg of each teams defensive SPS, 30 Slots
     vector <float>teamDspgavg;//Avg of each teams defensive SPG, 30 slots
-    vector <int> NUMBER_PLY_TEAM; //Numbers of players on each team, will be used more once injuries are implemented
+    vector <float> NUMBER_PLY_TEAM; //Numbers of players on each team, will be used more once injuries are implemented
     vector<Player> teamPlyr; //vector of the class players that stores all of this data
     vector<int> teamDaw; //DAW
     vector<int> teamOaw; // same as above but for offense
@@ -26,25 +26,20 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     human_team = atoi(line.c_str()) - 1;
     player_data.close();
     ifstream save_data ("savedata.txt");
-
+    int numPlayers = 0;
+    int line_int1 = 0, line_int2 = 0, line_int3 = 0, line_int4 = 0; //Honestly i have no idea what either this or line 36 does
+    float line_float1, line_float2, line_float3, line_float4;
     if (save_data.is_open())
     {
-        while (save_data.eof() == false) //Checks to see if the file is done, if it isnt it will read the data and convert it into the correct data type
+        while (!save_data.eof()) //Checks to see if the file is done, if it isnt it will read the data and convert it into the correct data type
         {
-            int numPlayers = 0;
-            int line_int1 = 0, line_int2 = 0, line_int3 = 0, line_int4 = 0; //Honestly i have no idea what either this or line 36 does
-            float line_float1, line_float2, line_float3, line_float4;
             int z = teamPlyr.size();
             teamPlyr.resize(z+1);
             spgStats.resize(teamPlyr.size());
             spsStats.resize(teamPlyr.size());
             dspgStats.resize(teamPlyr.size());
             dspsStats.resize(teamPlyr.size());
-            //teamSpgavg.resize(teamPlyr.size());
-            //teamSpsavg.resize(teamPlyr.size());
-            //teamOawavg.resize(teamPlyr.size());
-            //teamDawavg.resize(teamPlyr.size());
-            //teamOaw.resize(teamPlyr.size());
+            teamOaw.resize(teamPlyr.size());
             teamDaw.resize(teamPlyr.size());
             NUMBER_PLY_TEAM.resize(30);
             getline(save_data,line);
@@ -87,7 +82,7 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
         save_data.close();
     }
 
-    else cout << "Unable to open file";
+    else cout << "Unable to open file" << endl;
     teamSpgavg.resize(30);
     teamSpsavg.resize(30);
     teamDspgavg.resize(30);
@@ -108,6 +103,6 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     cout << "Please enter # for team 2: " << endl;
     cin >> ui;
     int team2num = atoi(ui.c_str()) - 1;
-    view_roster(roster_team,teamPlyr,human_team);
-    //game_sim(spgStats,teamSpsavg,teamDspsavg,teamDspgavg, human_team,team2num, teamOawavg,teamDawavg,dspgStats,dspsStats); //Getting error here, says cannot convert ftom vector<float> to int?
+    view_roster(teamPlyr,human_team);
+    game_sim(spgStats,teamSpsavg,teamDspsavg,teamDspgavg, human_team,team2num, teamOawavg,teamDawavg,dspgStats,dspsStats); //Getting error here, says cannot convert ftom vector<float> to int?
 }

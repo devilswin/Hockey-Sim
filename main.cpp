@@ -15,14 +15,14 @@ using namespace std;
 
 int main()
 {
-    mt19937 rand_engine(time(nullptr));
-    vector<Player> plyrs;
-    srand(time(NULL));
+
+    srand(time(0));
     cout << "Is this the first time this program has run?" << endl;
     string firstTime;
     cin >> firstTime;
     if (firstTime == "Yes" || firstTime == "yes") //Performs first time setup i.e it generates players
     {
+        vector<Player> plyrs;
         for (int i = 0; i < 30; i++)
         {
             int limit = 18; //rand() % (25 - 18) + 18;
@@ -31,7 +31,7 @@ int main()
                 int z = plyrs.size();
                 plyrs.resize(z+1);
                 plyrs[z].readPlayerData();
-                plyrs[z].setPlayeName(rand_engine);
+                plyrs[z].setPlayeName();
                 plyrs[z].setPlyrVal();
                 plyrs[z].setPlayerTeam(i);
             }
@@ -66,12 +66,10 @@ int main()
     {
         assemble_Team_Data();
     }
-    else
-    {
-        cout << "Please Enter either Yes or No!" << endl;
-        firstTime = "";
-        cin >> firstTime;
-    }
-    Sleep(10000);
+   else
+   {
+       cout << "Uh Oh! Invalid response! Program Will exit" << endl;
+       return 0;
+   }
     return 0;
 }
