@@ -1,3 +1,5 @@
+#ifndef FIRSTTIME_H_INCLUDED
+#define FIRSTTIME_H_INCLUDED
 #include <ctime>
 #include <iostream>
 #include <fstream>
@@ -10,16 +12,6 @@
 #include "Player.h"
 #include "assemble_teamdata.h"
 #include "game_sim.h"
-#include "FirstTime.h"
-
 using namespace std;
-
-int main()
-{
-
-    srand(time(0));
-
-    FIRSTTIME_LAUNCHED();
-
-    return 0;
-}
+void FIRSTTIME_LAUNCHED();
+#endif // FIRSTTIME_H_INCLUDED

@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <vector>
 #include <cstdlib>
+#include <cmath>
 using namespace std;
 
 class Player
@@ -17,16 +18,19 @@ public:
     void readPlayerData();
     void setPlayeName();
     void setPlayerTeam(const int& team);
-    void organize_Players(string z,int a,float b,float c,int d);
+
     void setPlyrVal();
+    void setPlyrPOS(int TYPE_OF_PLAYER);
 public:
+    int plOvr;//Stats will only change when the potential system is implemented
+    int plteam;
+    string plName;
+    int pldaw, ploaw;
+    float plSpg, plSps, pldsps, pldspg;
+    string plPOS;
+private:
     int numFnames;
     int numLnames;
-    int plteam, pldaw, ploaw;
-    int plOvr;
-    float plSpg, plSps, pldsps, pldspg;
-    string werk;
-    string plName;
     vector<string> plFname, plLname;
 
 };

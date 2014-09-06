@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1409163333 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\assemble_teamdata.cpp
+1410036509 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\assemble_teamdata.cpp
 	"assemble_teamdata.h"
 
 1409160646 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\assemble_teamdata.h
@@ -16,7 +16,19 @@
 	"game_sim.h"
 	"view_roster.h"
 
-1409160646 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\player.h
+1410047437 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\player.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	<cmath>
+
+1410036509 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\game_sim.h
 	<ctime>
 	<iostream>
 	<fstream>
@@ -27,18 +39,7 @@
 	<vector>
 	<cstdlib>
 
-1409160646 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\game_sim.h
-	<ctime>
-	<iostream>
-	<fstream>
-	<string>
-	<random>
-	<Windows.h>
-	<stdio.h>
-	<vector>
-	<cstdlib>
-
-1409160646 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\view_roster.h
+1410036509 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\view_roster.h
 	<ctime>
 	<iostream>
 	<fstream>
@@ -50,10 +51,10 @@
 	<cstdlib>
 	"Player.h"
 
-1409162631 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\game_sim.cpp
+1410036509 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\game_sim.cpp
 	"game_sim.h"
 
-1409160646 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\main.cpp
+1410044222 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\main.cpp
 	<ctime>
 	<iostream>
 	<fstream>
@@ -66,11 +67,12 @@
 	"Player.h"
 	"assemble_teamdata.h"
 	"game_sim.h"
+	"FirstTime.h"
 
-1409160646 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\player.cpp
+1410047482 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\player.cpp
 	"Player.h"
 
-1409160646 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\view_roster.cpp
+1410036509 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\view_roster.cpp
 	"view_roster.h"
 
 1409931164 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\assemble_teamdata.cpp
@@ -146,4 +148,21 @@
 
 1409931174 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.cpp
 	"view_roster.h"
+
+1410047711 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\firsttime.cpp
+	"FirstTime.h"
+
+1410044232 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\firsttime.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	"Player.h"
+	"assemble_teamdata.h"
+	"game_sim.h"
 

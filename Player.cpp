@@ -1,48 +1,68 @@
 #include "Player.h"
 void Player::readPlayerData()//will read from a file of first and last names
+{
+    string line;
+    ifstream fnameFile("PlayersFname.txt");
+    if (fnameFile.is_open())
     {
-        string line;
-        ifstream fnameFile("PlayersFname.txt");
-        if (fnameFile.is_open())
-        {
-            while (getline(fnameFile,line))
+        while (getline(fnameFile,line))
             plFname.push_back(line);
-            fnameFile.close();
-        }
-        ifstream lnameFile("PlayersLname.txt");
-        if (lnameFile.is_open())
-        {
-           while (getline(lnameFile,line))
+        fnameFile.close();
+    }
+    ifstream lnameFile("PlayersLname.txt");
+    if (lnameFile.is_open())
+    {
+        while (getline(lnameFile,line))
             plLname.push_back(line);
-            lnameFile.close();
-        }
-
+        lnameFile.close();
     }
+
+}
 void Player::setPlayeName() //Will pick two options for a first and last name
-    {
-        //readPlayerData();
-        int y = rand() % plFname.size() + 1;
-        string fname = plFname[y - 1];
-        int x = rand() % plLname.size() + 1;
-        string lname = plLname[x - 1];
-        plName = string(fname + " " + lname);
-
-    }
+{
+    //readPlayerData();
+    int y = rand() % plFname.size() + 1;
+    string fname = plFname[y - 1];
+    int x = rand() % plLname.size() + 1;
+    string lname = plLname[x - 1];
+    plName = string(fname + " " + lname);
+}
 void Player::setPlayerTeam(const int& team) //Gives the player a numerical value for what team he is on
-    {
-        plteam = team;
-    }
-void Player::organize_Players(string z,int a,float b,float c,int d)
-    {
-        plName = z, plOvr = a, plSpg = b, plSps = c, plteam = d;
-    }
+{
+    plteam = team;
+}
 void Player::setPlyrVal() //all of the algorithms to determine the stats
+{
+    pldaw = rand()% (99-70) + 70;
+    ploaw = rand()% (99-70) + 70;
+    plOvr = (pldaw + ploaw) / 2;
+    plSps = ploaw / 10.0f;
+    pldsps = (pldaw / 10.0f)/5;
+    plSpg = (plSps / 2) / 2.25;
+    pldspg = (pldsps / 2) / 2.25;
+}
+void Player::setPlyrPOS(int TYPE_OF_PLAYER)
+{
+    if (TYPE_OF_PLAYER == 0)
     {
-        pldaw = rand()% (99-70) + 70;
-        ploaw = rand()% (99-70) + 70;
-        plOvr = (pldaw + ploaw) / 2;
-        plSps = ploaw / 10.0f;
-        pldsps = (pldaw / 10.0f)/5;
-        plSpg = (plSps / 2) / 2.25;
-        pldspg = (pldsps / 2) / 2.25;
+        plPOS = "D";
     }
+    else
+    {
+        int F_POS_DESIGN = rand()% 3;
+        if (F_POS_DESIGN == 0)
+        {
+            plPOS = "LW";
+        }
+        else if (F_POS_DESIGN == 1)
+        {
+            plPOS = "RW";
+        }
+        else
+        {
+            plPOS = "C";
+        }
+    }
+
+
+}

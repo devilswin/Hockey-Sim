@@ -35,6 +35,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="FirstTime.cpp" />
+		<Unit filename="FirstTime.h" />
 		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
 		<Unit filename="assemble_teamdata.cpp" />
