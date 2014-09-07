@@ -19,6 +19,7 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     vector<int> teamOaw; // same as above but for offense
     vector<float> teamDawavg;
     vector<float> teamOawavg;
+    vector<Lines> Team_Lines;
     vector<vector<string> > roster_team(30, vector<string>(0, ""));
     ifstream player_data("plyr.txt");
     int human_team = 0;
@@ -41,9 +42,12 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
             dspsStats.resize(teamPlyr.size());
             teamOaw.resize(teamPlyr.size());
             teamDaw.resize(teamPlyr.size());
+            Team_Lines.resize(30);
             NUMBER_PLY_TEAM.resize(30);
             getline(save_data,line);
             teamPlyr[numPlayers].plName = line;
+            getline(save_data,line);
+            teamPlyr[numPlayers].plPOS = line;
             getline(save_data,line);
             line_int1 = atoi(line.c_str());
             teamPlyr[numPlayers].plOvr = line_int1;
@@ -68,8 +72,27 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
             getline(save_data,line);
             line_int2 = atoi(line.c_str());
             teamPlyr[numPlayers].plteam = line_int2;
-
             NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam] += 1;
+            if (teamPlyr[numPlayers].plPOS == "LW")
+            {
+                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_LW.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]);
+                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_LW[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+            }
+            if (teamPlyr[numPlayers].plPOS == "C")
+            {
+                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_CE.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]);
+                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_CE[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+            }
+            if (teamPlyr[numPlayers].plPOS == "RW")
+            {
+                Team_Lines[teamPlyr[teamPlyr[numPlayers].plTeam].plTeam].Tot_RW.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]));
+                Team_Lines[teamPlyr[teamPlyr[numPlayers].plTeam].plTeam].Tot_RW[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+            }
+            else
+            {
+                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_DE.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]);
+                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_DE[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+            }
             dspsStats[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].pldsps;
             dspgStats[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].pldspg;
             spsStats[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].plSps;
@@ -89,6 +112,13 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     teamDspsavg.resize(30);
     teamOawavg.resize(30);
     teamDawavg.resize(30);
+    for (int i = 0; i < 30; i++)
+    {
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_LW);
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_CE);
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_RW);
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_DE);
+    }
     for (int i = 0; i < 30;) //Gathers all of the averages for each stat type for each team
     {
         teamSpsavg[i] = spsStats[i] / NUMBER_PLY_TEAM[i];

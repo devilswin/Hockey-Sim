@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1410036509 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\assemble_teamdata.cpp
+1410118472 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\assemble_teamdata.cpp
 	"assemble_teamdata.h"
 
-1409160646 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\assemble_teamdata.h
+1410117901 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\assemble_teamdata.h
 	<ctime>
 	<iostream>
 	<fstream>
@@ -15,8 +15,9 @@
 	"Player.h"
 	"game_sim.h"
 	"view_roster.h"
+	"Lines.h"
 
-1410047437 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\player.h
+1410118449 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\player.h
 	<ctime>
 	<iostream>
 	<fstream>
@@ -28,7 +29,7 @@
 	<cstdlib>
 	<cmath>
 
-1410036509 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\game_sim.h
+1410116450 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\game_sim.h
 	<ctime>
 	<iostream>
 	<fstream>
@@ -149,10 +150,10 @@
 1409931174 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.cpp
 	"view_roster.h"
 
-1410047711 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\firsttime.cpp
+1410118442 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\firsttime.cpp
 	"FirstTime.h"
 
-1410044232 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\firsttime.h
+1410116421 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\firsttime.h
 	<ctime>
 	<iostream>
 	<fstream>
@@ -164,5 +165,38 @@
 	<cstdlib>
 	"Player.h"
 	"assemble_teamdata.h"
-	"game_sim.h"
+
+1410119374 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\lines.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	<cmath>
+	"Player.h"
+	<algorithm>
+
+1410118657 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\lines.cpp
+	"Lines.h"
+
+1410119273 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\teams.cpp
+	"Teams.h"
+
+1410119264 c:\users\xboxg_000\desktop\hockeysimct\hockeysim\teams.h
+	<ctime>
+	<iostream>
+	<fstream>
+	<string>
+	<random>
+	<Windows.h>
+	<stdio.h>
+	<vector>
+	<cstdlib>
+	<cmath>
+	"Player.h"
+	"Lines.h"
 

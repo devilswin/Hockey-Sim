@@ -46,7 +46,7 @@ void FIRSTTIME_LAUNCHED()
         for (int i = 0; i<plyrs.size(); i++)
         {
             playerSaveData << plyrs[i].plName << endl;
-            playerSaveData << plyrs[i].plPOS << endl;
+            playerSaveData << plyrs[i].plPOS<< endl;
             playerSaveData << plyrs[i].plOvr << endl;
             playerSaveData << plyrs[i].ploaw << endl;
             playerSaveData << plyrs[i].pldaw << endl;

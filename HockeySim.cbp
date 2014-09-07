@@ -15,6 +15,7 @@
 					<Add option="-pedantic-errors" />
 					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -25,6 +26,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -43,7 +45,9 @@
 		<Unit filename="assemble_teamdata.h" />
 		<Unit filename="game_sim.cpp" />
 		<Unit filename="game_sim.h" />
+		<Unit filename="include/Teams.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Teams.cpp" />
 		<Unit filename="view_roster.cpp" />
 		<Unit filename="view_roster.h" />
 		<Extensions>

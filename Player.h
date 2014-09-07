@@ -1,5 +1,6 @@
 #ifndef PLAYER_H
 #define PLAYER_H
+#pragma once
 #include <ctime>
 #include <iostream>
 #include <fstream>
@@ -10,6 +11,7 @@
 #include <vector>
 #include <cstdlib>
 #include <cmath>
+
 using namespace std;
 
 class Player
