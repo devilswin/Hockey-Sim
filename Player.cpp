@@ -66,3 +66,4 @@ void Player::setPlyrPOS(int TYPE_OF_PLAYER)
 
 
 }
+

@@ -73,25 +73,25 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
             line_int2 = atoi(line.c_str());
             teamPlyr[numPlayers].plteam = line_int2;
             NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam] += 1;
-            if (teamPlyr[numPlayers].plPOS == "LW")
+            if (teamPlyr[numPlayers].plPOS == "LW") //Places the players into diffrent vecs based on what POS they are
             {
-                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_LW.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]);
-                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_LW[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+                Team_Lines[teamPlyr[numPlayers].plteam].Tot_LW.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]);
+                Team_Lines[teamPlyr[numPlayers].plteam].Tot_LW[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]] = teamPlyr[numPlayers];
             }
             if (teamPlyr[numPlayers].plPOS == "C")
             {
-                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_CE.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]);
-                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_CE[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+                Team_Lines[teamPlyr[numPlayers].plteam].Tot_CE.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]);
+                Team_Lines[teamPlyr[numPlayers].plteam].Tot_CE[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]] = teamPlyr[numPlayers];
             }
             if (teamPlyr[numPlayers].plPOS == "RW")
             {
-                Team_Lines[teamPlyr[teamPlyr[numPlayers].plTeam].plTeam].Tot_RW.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]));
-                Team_Lines[teamPlyr[teamPlyr[numPlayers].plTeam].plTeam].Tot_RW[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+                Team_Lines[teamPlyr[teamPlyr[numPlayers].plteam].plteam].Tot_RW.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]);
+                Team_Lines[teamPlyr[teamPlyr[numPlayers].plteam].plteam].Tot_RW[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]] = teamPlyr[numPlayers];
             }
             else
             {
-                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_DE.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]);
-                Team_Lines[teamPlyr[numPlayers].plTeam].Tot_DE[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plTeam]] = teamPlyr[numPlayers];
+                Team_Lines[teamPlyr[numPlayers].plteam].Tot_DE.resize(NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]);
+                Team_Lines[teamPlyr[numPlayers].plteam].Tot_DE[NUMBER_PLY_TEAM[teamPlyr[numPlayers].plteam]] = teamPlyr[numPlayers];
             }
             dspsStats[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].pldsps;
             dspgStats[teamPlyr[numPlayers].plteam] += teamPlyr[numPlayers].pldspg;
@@ -112,12 +112,21 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     teamDspsavg.resize(30);
     teamOawavg.resize(30);
     teamDawavg.resize(30);
-    for (int i = 0; i < 30; i++)
+    vector<int> LWS;
+    vector<int> CES;
+    vector<int> RWS;
+    vector<int> DES;
+
+    for (int i = 0; i < 30; i++)//This sorts the players Overalls by greatest to least so that it could eventually sort the players into lines
     {
-            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_LW);
-            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_CE);
-            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_RW);
-            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_DE);
+            LWS.resize(Team_Lines[i].LW_OVR.size());
+            CES.resize(Team_Lines[i].CE_OVR.size());
+            RWS.resize(Team_Lines[i].RW_OVR.size());
+            DES.resize(Team_Lines[i].DE_OVR.size());
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_LW, LWS[i]);//The error that occurs here is that the func() Sort_Players_OVR, no clue why
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_CE,CES[i]);
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_RW,RWS[i]);
+            Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_DE,DES[i]);
     }
     for (int i = 0; i < 30;) //Gathers all of the averages for each stat type for each team
     {

@@ -13,6 +13,7 @@
 #include "game_sim.h"
 #include "view_roster.h"
 #include "Lines.h"
+#include <algorithm>
 using namespace std;
 void assemble_Team_Data();
 #endif // ASSEMBLE_TEAMDATA_H_INCLUDED
