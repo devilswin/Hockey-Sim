@@ -39,15 +39,17 @@
 		</Compiler>
 		<Unit filename="FirstTime.cpp" />
 		<Unit filename="FirstTime.h" />
+		<Unit filename="Lines.cpp" />
+		<Unit filename="Lines.h" />
 		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
 		<Unit filename="assemble_teamdata.cpp" />
 		<Unit filename="assemble_teamdata.h" />
 		<Unit filename="game_sim.cpp" />
 		<Unit filename="game_sim.h" />
-		<Unit filename="include/Teams.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Teams.cpp" />
+		<Unit filename=“Lines.cpp" />
+		<Unit filename=“Lines.h” />
 		<Unit filename="view_roster.cpp" />
 		<Unit filename="view_roster.h" />
 		<Extensions>

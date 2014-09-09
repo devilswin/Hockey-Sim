@@ -14,9 +14,9 @@ void view_roster(vector<Player> my_team_plyr, int human_team) //Allows the playe
             int plyr_def = my_team_plyr[i].pldaw;
             int plyr_off = my_team_plyr[i].ploaw;
             cout << plyr_name << " "<< "Overall: " << plyr_ovr << " Defense: " << plyr_def << " Offense: " << plyr_off << endl;
-            Sleep(1000);
+            sleep(1000);
 
         }
-        Sleep(10000);
+        sleep(10000);
     }
 }

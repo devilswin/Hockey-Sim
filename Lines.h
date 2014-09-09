@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string>
 #include <random>
-#include <Windows.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <vector>
 #include <cstdlib>
@@ -24,7 +24,7 @@ class Lines
         vector<int> CE_OVR;
         vector<int> RW_OVR;
         vector<int> DE_OVR;
-        void Sort_Players_OVR(vector<Player>POS_TO_SORT,vector<int> Plyr_OVR);//Sorts players
+        void Sort_Players_OVR(vector<Player>POS_TO_SORT);//Sorts players
         //Lines(int);
         //void init_Line_Vec(vector<Player>);
     private:

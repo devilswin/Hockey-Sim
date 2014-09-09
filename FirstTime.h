@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string>
 #include <random>
-#include <Windows.h>
+#include <unistd.h>
 #include <stdio.h>
 #include <vector>
 #include <cstdlib>
