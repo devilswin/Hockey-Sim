@@ -12,6 +12,7 @@
 #include <cmath>
 #include "Player.h"
 #include <algorithm>
+#pragma once
 using namespace std;
 class Lines
 {
@@ -20,11 +21,9 @@ class Lines
         vector<Player> Tot_CE;
         vector<Player> Tot_RW;
         vector<Player> Tot_DE;
-        vector<int> LW_OVR;
-        vector<int> CE_OVR;
-        vector<int> RW_OVR;
-        vector<int> DE_OVR;
-        void Sort_Players_OVR(vector<Player>POS_TO_SORT);//Sorts players
+        //vector<Lines> POS_TO_SORT;
+        void Sort_Players_OVR(vector<Lines> POS_TO_SORT);//Sorts players
+
         //Lines(int);
         //void init_Line_Vec(vector<Player>);
     private:

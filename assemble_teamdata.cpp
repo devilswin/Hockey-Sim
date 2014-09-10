@@ -119,15 +119,8 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
 
     for (int i = 0; i < 30; i++)//This sorts the players Overalls by greatest to least so that it could eventually sort the players into lines
     {
-            LWS.resize(Team_Lines[i].LW_OVR.size());
-            CES.resize(Team_Lines[i].CE_OVR.size());
-            RWS.resize(Team_Lines[i].RW_OVR.size());
-            DES.resize(Team_Lines[i].DE_OVR.size());
-            for (int q = 0; q < Team_Lines[i].Tot_LW.size();q++) {Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_LW[q]);}          //The error that occurs here is that the func() Sort_Players_OVR, no clue why
-            for (int q = 0; q < Team_Lines[i].Tot_CE.size();q++) {Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_CE[q]);}          //The error that occurs here is that the func() Sort_Players_OVR, no clue why
-            for (int q = 0; q < Team_Lines[i].Tot_RW.size();q++) {Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_RW[q]);}          //The error that occurs here is that the func() Sort_Players_OVR, no clue why
-            for (int q = 0; q < Team_Lines[i].Tot_DE.size();q++) {Team_Lines[i].Sort_Players_OVR(Team_Lines[i].Tot_DE[q]);}          //The error that occurs here is that the func() Sort_Players_OVR, no clue why
-
+                   //The error that occurs here is that the func() Sort_Players_OVR, no clue why
+            Team_Lines[i].Sort_Players_OVR(Team_Lines);
     }
     for (int i = 0; i < 30;) //Gathers all of the averages for each stat type for each team
     {
