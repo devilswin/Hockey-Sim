@@ -27,7 +27,7 @@ void Player::setPlayeName() //Will pick two options for a first and last name
     string lname = plLname[x - 1];
     plName = string(fname + " " + lname);
 }
-void Player::setPlayerTeam(const int& team) //Gives the player a numerical value for what team he is on
+void Player::setPlayerTeam(int team) //Gives the player a numerical value for what team he is on
 {
     plteam = team;
 }

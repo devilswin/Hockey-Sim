@@ -19,7 +19,7 @@ class Player
 public:
     void readPlayerData();
     void setPlayeName();
-    void setPlayerTeam(const int team);
+    void setPlayerTeam(int team);
     void setPlyrVal();
     void setPlyrPOS(int TYPE_OF_PLAYER);
 public:
