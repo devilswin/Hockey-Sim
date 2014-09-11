@@ -1,7 +1,8 @@
 #include "Lines.h"
 using namespace std;
 struct foo_b_sorter {
-    bool operator()(const Player& plOvr1, const Player& plOvr2)
+    
+    bool operator()(const Player& plOvr1, const Player & plOvr2)
     {
     	if(plOvr1.plOvr == plOvr2.plOvr)
     		return plOvr1.plOvr < plOvr2.plOvr;

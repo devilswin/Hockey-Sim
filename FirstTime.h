@@ -11,7 +11,7 @@
 #include <cstdlib>
 #include "Player.h"
 #include "assemble_teamdata.h"
-#pragma once
+
 using namespace std;
 void FIRSTTIME_LAUNCHED();
 #endif // FIRSTTIME_H_INCLUDED

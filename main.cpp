@@ -17,7 +17,7 @@ using namespace std;
 int main()
 {
 
-    srand(time(0));
+    srand(time(NULL));
 
     FIRSTTIME_LAUNCHED();
 

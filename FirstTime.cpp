@@ -11,12 +11,15 @@ void FIRSTTIME_LAUNCHED()
         for (int q = 0; q < 30; q++)
         {
             int limit = 18; //rand() % (25 - 18) + 18;
-
+            plyrs[q].readPlayerData();
+            ;
             for (int w = 0; w < limit; w++)
             {
+                
                 int z = plyrs.size();
                 plyrs.resize(z+1);
-                plyrs[z].readPlayerData();
+                
+                
                 plyrs[z].setPlayeName();
                 plyrs[z].setPlyrVal();
                 if (w <= 6)
@@ -28,6 +31,7 @@ void FIRSTTIME_LAUNCHED()
                     plyrs[z].setPlyrPOS(1);
                 }
                 plyrs[z].setPlayerTeam(q);
+                
             }
 
         }
