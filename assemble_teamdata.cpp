@@ -120,7 +120,7 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     for (int i = 0; i < 30; i++)//This sorts the players Overalls by greatest to least so that it could eventually sort the players into lines
     {
                    //The error that occurs here is that the func() Sort_Players_OVR, no clue why
-            Team_Lines[i].Sort_Players_OVR(Team_Lines);
+            Team_Lines[i].Sort_Players_OVR(Team_Lines, i);
     }
     for (int i = 0; i < 30;) //Gathers all of the averages for each stat type for each team
     {

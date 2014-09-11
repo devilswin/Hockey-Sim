@@ -6,9 +6,12 @@
 #include <string>
 #include <random>
 #include <unistd.h>
+#include <windows.h>
 #include <stdio.h>
 #include <vector>
 #include <cstdlib>
+#include <chrono>
+#include <thread>
 #pragma once
 using namespace std;
 void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<float> Dspg, int x, int y, vector<float>teamOaw, vector<float>teamDaw, vector<float> dSpg, vector<float> dSps);

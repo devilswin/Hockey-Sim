@@ -76,16 +76,16 @@
 1410036509 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\view_roster.cpp
 	"view_roster.h"
 
-1410144452 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\assemble_teamdata.cpp
+1410480382 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\assemble_teamdata.cpp
 	"assemble_teamdata.h"
 
-1410141903 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\assemble_teamdata.h
+1410476387 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\assemble_teamdata.h
 	<ctime>
 	<iostream>
 	<fstream>
 	<string>
 	<random>
-	<Windows.h>
+	<unistd.h>
 	<stdio.h>
 	<vector>
 	<cstdlib>
@@ -93,52 +93,59 @@
 	"game_sim.h"
 	"view_roster.h"
 	"Lines.h"
+	<algorithm>
 
-1410141902 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\player.h
+1410481962 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\player.h
 	<ctime>
 	<iostream>
 	<fstream>
 	<string>
 	<random>
-	<Windows.h>
+	<unistd.h>
 	<stdio.h>
 	<vector>
 	<cstdlib>
 	<cmath>
 
-1410141903 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\game_sim.h
+1410482196 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\game_sim.h
 	<ctime>
 	<iostream>
 	<fstream>
 	<string>
 	<random>
-	<Windows.h>
+	<unistd.h>
+	<windows.h>
 	<stdio.h>
 	<vector>
 	<cstdlib>
+	<chrono>
+	<thread>
 
-1409931176 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.h
+1410481960 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.h
 	<ctime>
 	<iostream>
 	<fstream>
 	<string>
 	<random>
-	<Windows.h>
+	<unistd.h>
+	<windows.h>
 	<stdio.h>
 	<vector>
 	<cstdlib>
+	<chrono>
+	<thread>
 	"Player.h"
 
-1409931877 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\game_sim.cpp
+1410482254 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\game_sim.cpp
 	"game_sim.h"
 
-1410141903 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\main.cpp
+1410476387 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\main.cpp
 	<ctime>
 	<iostream>
 	<fstream>
 	<string>
 	<random>
-	<Windows.h>
+	<unistd.h>
 	<stdio.h>
 	<vector>
 	<cstdlib>
@@ -147,10 +154,10 @@
 	"game_sim.h"
 	"FirstTime.h"
 
-1410142340 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\player.cpp
+1410481163 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\player.cpp
 	"Player.h"
 
-1409931174 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.cpp
+1410482265 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\view_roster.cpp
 	"view_roster.h"
 
 1410118442 source:c:\users\xboxg_000\desktop\hockeysimct\hockeysim\firsttime.cpp
@@ -203,13 +210,13 @@
 	"Player.h"
 	"Lines.h"
 
-1410144239 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\lines.h
+1410480358 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\lines.h
 	<ctime>
 	<iostream>
 	<fstream>
 	<string>
 	<random>
-	<Windows.h>
+	<unistd.h>
 	<stdio.h>
 	<vector>
 	<cstdlib>
@@ -217,23 +224,23 @@
 	"Player.h"
 	<algorithm>
 
-1410141902 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\firsttime.cpp
+1410481493 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\firsttime.cpp
 	"FirstTime.h"
 
-1410141902 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\firsttime.h
+1410476387 c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\firsttime.h
 	<ctime>
 	<iostream>
 	<fstream>
 	<string>
 	<random>
-	<Windows.h>
+	<unistd.h>
 	<stdio.h>
 	<vector>
 	<cstdlib>
 	"Player.h"
 	"assemble_teamdata.h"
 
-1410144568 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\lines.cpp
+1410480352 source:c:\users\my pc\documents\desktop\hockeyseasonsimgame\hockeysim\lines.cpp
 	"Lines.h"
 
 1410357106 source:/Users/gabeorlanski/Desktop/Plse save battery/C++/Hockey-Sim/assemble_teamdata.cpp

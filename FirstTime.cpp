@@ -11,17 +11,19 @@ void FIRSTTIME_LAUNCHED()
         for (int q = 0; q < 30; q++)
         {
             int limit = 18; //rand() % (25 - 18) + 18;
-            plyrs[q].readPlayerData();
-            ;
+
+
             for (int w = 0; w < limit; w++)
             {
-                
+
                 int z = plyrs.size();
                 plyrs.resize(z+1);
-                
-                
+                plyrs[z].readPlayerData();
+
                 plyrs[z].setPlayeName();
+
                 plyrs[z].setPlyrVal();
+
                 if (w <= 6)
                 {
                     plyrs[z].setPlyrPOS(0);   //1 = Forwards 0 = Defense
@@ -31,10 +33,12 @@ void FIRSTTIME_LAUNCHED()
                     plyrs[z].setPlyrPOS(1);
                 }
                 plyrs[z].setPlayerTeam(q);
-                
+
+
             }
 
         }
+
         string human_input;
         cout << "Pick a # between 1-30, this will be your team: " << endl;
         cin >> human_input;
@@ -49,6 +53,7 @@ void FIRSTTIME_LAUNCHED()
         playerSaveData.open ("savedata.txt");
         for (int i = 0; i<plyrs.size(); i++)
         {
+            cout << "yes?" << endl;
             playerSaveData << plyrs[i].plName << endl;
             playerSaveData << plyrs[i].plPOS<< endl;
             playerSaveData << plyrs[i].plOvr << endl;

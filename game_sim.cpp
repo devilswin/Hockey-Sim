@@ -60,7 +60,7 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
     {
         cout << "No one has the edge" << endl;
     }
-    sleep (3000);
+    Sleep (3000);
     cout << spgt1 << "    " << spgt2 << endl;
     cout << spst1 << "    " << spst2 << endl;
     int spgInt_t1 = (int)spgt1;
@@ -131,7 +131,7 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
                 }
                 time_left -=1;
 
-                sleep (1000);
+                //this_thread::sleep_for(chrono::milliseconds(1000));
                 system("cls");
                 t1shottake++;
 
@@ -174,7 +174,7 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
                     }
                 }
                 time_left -=1;
-                sleep (1000);
+              // std::this_thread::sleep_for(std::chrono::milliseconds(1000));
                 system("cls");
                 t2shottake++;
 
@@ -222,7 +222,7 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
     }
     cout << "Team "<< x+1 <<" won: " << t1wins << "    " << otwt1 <<  endl;
     cout << "Team "<< y+1 <<" won: : " << t2wins <<"    " << otwt2 << endl;
-    sleep(5000);
+    //std::this_thread::sleep_for(std::chrono::milliseconds(5000));
 
 }
 

@@ -11,7 +11,7 @@
 #include <vector>
 #include <cstdlib>
 #include <cmath>
-
+#pragma once
 using namespace std;
 
 class Player

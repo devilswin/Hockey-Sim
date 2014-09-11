@@ -21,12 +21,12 @@ void Player::readPlayerData()//will read from a file of first and last names
 void Player::setPlayeName() //Will pick two options for a first and last name
 {
     //readPlayerData();
-    cout << plFname.size();
-    int y = rand() % plFname.size();
+
+    int y = rand()% plFname.size() + 1;
     string fname = plFname[y];
-    int x = rand() % plLname.size();
+    int x = rand()% plLname.size() + 1;
     string lname = plLname[x];
-    plName = string(fname + " " + lname);
+    plName = fname + " " + lname;
 }
 void Player::setPlayerTeam(int team) //Gives the player a numerical value for what team he is on
 {

@@ -48,15 +48,12 @@
 		<Unit filename="game_sim.cpp" />
 		<Unit filename="game_sim.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename=“Lines.cpp" />
-		<Unit filename=“Lines.h” />
 		<Unit filename="view_roster.cpp" />
 		<Unit filename="view_roster.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
