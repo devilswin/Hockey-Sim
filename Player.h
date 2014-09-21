@@ -18,7 +18,7 @@ class Player
 {
 public:
     void readPlayerData();
-    void setPlayeName();
+    void setPlayeName(mt19937& rand_engine);
     void setPlayerTeam(int team);
     void setPlyrVal();
     void setPlyrPOS(int TYPE_OF_PLAYER);
@@ -29,9 +29,11 @@ public:
     int pldaw, ploaw;
     float plSpg, plSps, pldsps, pldspg;
     string plPOS;
+    string test1;
+    string test2;
 private:
-    int numFnames;
-    int numLnames;
+    //int numFnames;
+    //int numLnames;
     vector<string> plFname, plLname;
 
 };

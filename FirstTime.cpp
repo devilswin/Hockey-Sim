@@ -12,7 +12,7 @@ void FIRSTTIME_LAUNCHED()
         {
             int limit = 18; //rand() % (25 - 18) + 18;
 
-
+            mt19937 rand_engine(0);
             for (int w = 0; w < limit; w++)
             {
 
@@ -20,7 +20,7 @@ void FIRSTTIME_LAUNCHED()
                 plyrs.resize(z+1);
                 plyrs[z].readPlayerData();
 
-                plyrs[z].setPlayeName();
+                plyrs[z].setPlayeName(rand_engine);
 
                 plyrs[z].setPlyrVal();
 
@@ -54,7 +54,7 @@ void FIRSTTIME_LAUNCHED()
         for (int i = 0; i<plyrs.size(); i++)
         {
             cout << "yes?" << endl;
-            playerSaveData << plyrs[i].plName << endl;
+            playerSaveData << plyrs[i].test1 << " " << plyrs[i].test1 << endl;
             playerSaveData << plyrs[i].plPOS<< endl;
             playerSaveData << plyrs[i].plOvr << endl;
             playerSaveData << plyrs[i].ploaw << endl;

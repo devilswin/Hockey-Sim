@@ -6,7 +6,7 @@
 #include <string>
 #include <random>
 #include <unistd.h>
-#include <windows.h>
+//#include <windows.h>
 #include <stdio.h>
 #include <vector>
 #include <cstdlib>
