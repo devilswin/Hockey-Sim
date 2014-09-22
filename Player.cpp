@@ -18,15 +18,17 @@ void Player::readPlayerData()//will read from a file of first and last names
     }
 
 }
-void Player::setPlayeName() //Will pick two options for a first and last name
+void Player::setPlayeName(mt19937& rand_engine) //Will pick two options for a first and last name
 {
     //readPlayerData();
-
-    int y = rand()% plFname.size() + 1;
-    string fname = plFname[y];
-    int x = rand()% plLname.size() + 1;
-    string lname = plLname[x];
-    plName = fname + " " + lname;
+    
+    uniform_int_distribution<int> fname_rand(0, plFname.size());
+    uniform_int_distribution<int> lname_rand(0, plLname.size());
+    int fname = fname_rand(rand_engine);
+    int lname = lname_rand(rand_engine);
+    test1 = plFname[fname];
+    test2 = plLname[lname];
+    
 }
 void Player::setPlayerTeam(int team) //Gives the player a numerical value for what team he is on
 {

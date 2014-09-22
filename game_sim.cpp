@@ -60,7 +60,7 @@ void game_sim(vector<float> Spg, vector<float> Sps, vector<float> Dsps, vector<f
     {
         cout << "No one has the edge" << endl;
     }
-    Sleep (3000);
+    sleep (3000);
     cout << spgt1 << "    " << spgt2 << endl;
     cout << spst1 << "    " << spst2 << endl;
     int spgInt_t1 = (int)spgt1;

@@ -17,6 +17,7 @@
 		6322891119C1F10300C75C42 /* Teams.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6322890B19C1F10300C75C42 /* Teams.cpp */; };
 		6322891219C1F10300C75C42 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6322890D19C1F10300C75C42 /* test.cpp */; };
 		6322891319C1F10300C75C42 /* view_roster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6322890F19C1F10300C75C42 /* view_roster.cpp */; };
+		635B5FAC19C366A4005C648E /* File.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 635B5FAA19C366A4005C648E /* File.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		6322890E19C1F10300C75C42 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test.h; path = ../../test.h; sourceTree = "<group>"; };
 		6322890F19C1F10300C75C42 /* view_roster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = view_roster.cpp; path = ../../view_roster.cpp; sourceTree = "<group>"; };
 		6322891019C1F10300C75C42 /* view_roster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = view_roster.h; path = ../../view_roster.h; sourceTree = "<group>"; };
+		635B5FAA19C366A4005C648E /* File.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = File.cpp; sourceTree = "<group>"; };
+		635B5FAB19C366A4005C648E /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				632288FA19C1F0C100C75C42 /* assemble_teamdata.cpp */,
 				632288FB19C1F0C100C75C42 /* assemble_teamdata.h */,
 				632288F319C1F09C00C75C42 /* HockeySim.1 */,
+				635B5FAA19C366A4005C648E /* File.cpp */,
+				635B5FAB19C366A4005C648E /* File.h */,
 			);
 			path = HockeySim;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				6322891119C1F10300C75C42 /* Teams.cpp in Sources */,
 				6322890919C1F0D100C75C42 /* main.cpp in Sources */,
 				6322890119C1F0C700C75C42 /* FirstTime.cpp in Sources */,
+				635B5FAC19C366A4005C648E /* File.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +281,7 @@
 				632288F919C1F09C00C75C42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
