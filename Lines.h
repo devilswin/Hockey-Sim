@@ -22,7 +22,7 @@ class Lines
         vector<Player> Tot_RW;
         vector<Player> Tot_DE;
         //vector<Lines> POS_TO_SORT;
-        void Sort_Players_OVR(vector<Lines> POS_TO_SORT, int q);//Sorts players
+        void Sort_Players_OVR(vector<Lines> Team_Lines);//Sorts players
 
         //Lines(int);
         //void init_Line_Vec(vector<Player>);
