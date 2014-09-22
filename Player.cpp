@@ -2,14 +2,14 @@
 void Player::readPlayerData()//will read from a file of first and last names
 {
     string line;
-    ifstream fnameFile("PlayersFname.txt");
+    ifstream fnameFile("/Users/gabeorlanski/Desktop/Plse save battery/C++/Hockey-Sim/PlayersFname.txt");
     if (fnameFile.is_open())
     {
         while (getline(fnameFile,line))
             plFname.push_back(line);
         fnameFile.close();
     }
-    ifstream lnameFile("PlayersLname.txt");
+    ifstream lnameFile("/Users/gabeorlanski/Desktop/Plse save battery/C++/Hockey-Sim/PlayersLname.txt");
     if (lnameFile.is_open())
     {
         while (getline(lnameFile,line))

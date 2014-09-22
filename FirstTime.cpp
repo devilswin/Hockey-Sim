@@ -50,10 +50,9 @@ void FIRSTTIME_LAUNCHED()
         plyrdata.close();
         ofstream playerSaveData;
 
-        playerSaveData.open ("savedata.txt");
+        playerSaveData.open ("/Users/gabeorlanski/Desktop/Plse save battery/C++/Hockey-Sim/savedata.txt");
         for (int i = 0; i<plyrs.size(); i++)
         {
-            cout << "yes?" << endl;
             playerSaveData << plyrs[i].test1 << " " << plyrs[i].test1 << endl;
             playerSaveData << plyrs[i].plPOS<< endl;
             playerSaveData << plyrs[i].plOvr << endl;

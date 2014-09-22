@@ -21,20 +21,22 @@ void assemble_Team_Data()//reads player data from a file and assembles averages 
     vector<float> teamOawavg;
     vector<Lines> Team_Lines;
     vector<vector<string> > roster_team(30, vector<string>(0, ""));
-    ifstream player_data("plyr.txt");
+    ifstream player_data("/Users/gabeorlanski/Desktop/Plse save battery/C++/Hockey-Sim/plyr.txt");
     int human_team = 0;
     getline(player_data,line);
     human_team = atoi(line.c_str()) - 1;
     player_data.close();
-    ifstream save_data ("savedata.txt");
+    ifstream save_data ("/Users/gabeorlanski/Desktop/Plse save battery/C++/Hockey-Sim/savedata.txt");
     int numPlayers = 0;
     int line_int1 = 0, line_int2 = 0, line_int3 = 0, line_int4 = 0; //Honestly i have no idea what either this or line 36 does
     float line_float1, line_float2, line_float3, line_float4;
+    int z = teamPlyr.size();
+    z = 1;
     if (save_data.is_open())
     {
         while (!save_data.eof()) //Checks to see if the file is done, if it isnt it will read the data and convert it into the correct data type
         {
-            int z = teamPlyr.size();
+            
             teamPlyr.resize(z+1);
             spgStats.resize(teamPlyr.size());
             spsStats.resize(teamPlyr.size());
